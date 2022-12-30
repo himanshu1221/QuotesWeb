@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Box from './components/QuotesBox/Box';
 
 function App() {
   return (
     <>
-
+      <Box/>
     </>
   );
 }

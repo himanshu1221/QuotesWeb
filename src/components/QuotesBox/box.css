@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vw;
+    width: 55vw;
+    background-color: #FCF55F;
+    border-radius: 10px;
+    margin-top: 4rem;
+}
+
+.box2{
+    flex-wrap: wrap ;
+    height: 25vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+    background-color: white;
+    box-shadow: 5px 5px 30px 2px;
+}
+
+.text{  
+    padding: 60px;
+    position: relative;
+    width: 26vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Sevillana', cursive;
+    font-size: 40px;
+}
+
+.author-name{
+    width: 38vw;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.button{
+    width: 100%;
+    background-color: 	#FFC0CB;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 4px;
+    font-weight: 600;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.button:hover{
+    animation-name: bounce ;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+
+@media screen and (max-width:960px) {
+    .text{
+        font-size: 20px;
+        padding: 0px;
+    }
+    .author-name{
+        font-size: 10px;
+    }
+    .box2{
+        box-shadow: 3px 3px 4px 1px;
+    }
+}
