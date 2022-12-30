@@ -10,7 +10,7 @@
     height: 40vw;
     width: 55vw;
     background-color: #FCF55F;
-    border-radius: 10px;
+    border-radius: 40px;
     margin-top: 4rem;
 }
 
@@ -34,7 +34,7 @@
     align-items: center;
     color: black;
     font-family: 'Sevillana', cursive;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .author-name{
@@ -42,6 +42,7 @@
     display: flex;
     justify-content: flex-end;
     font-family: 'Bebas Neue', cursive;
+    opacity: 0.8;
 }
 
 .button{
@@ -71,7 +72,7 @@
 
 @media screen and (max-width:960px) {
     .text{
-        font-size: 20px;
+        font-size: 15px;
         padding: 0px;
     }
     .author-name{
@@ -79,5 +80,10 @@
     }
     .box2{
         box-shadow: 3px 3px 4px 1px;
+    }
+    .button{
+        font-size: 8px;
+        letter-spacing: 0px;
+        font-weight: 300;
     }
 }
