@@ -1,38 +1,35 @@
-import { async, useState } from 'react'
-import React, { useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState } from 'react'
 import './box.css'
+import{faTwitter,faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 
 const Box = () => {
+  const[Quote,setQuote] = useState([]);
 
-  const[Quotes,setQuotes] = useState([]);
-
-  const getQuotes = async() => {
-    const response = await fetch('https://type.fit/api/quotes')
-    setQuotes(await response.json());
+  const getQuotes = () =>{
+    fetch("https://type.fit/api/quotes")
+    .then((res)=>res.json())
+    .then((data)=>{
+      let random = Math.floor(Math.random() * data.length);
+      setQuote(data[random])
+    })
   }
 
-  useEffect(()=>{
-    getQuotes();
-  },[])
+
   return (
     <>
       <div className="box quotes-card">
-      {
-        Quotes.map((e)=>{
-          return(
-            <>
           <div className="box2 Quotes-Box">
-          <div className="text">
-          {e.text}
+          <div className="text">  
+            {Quote.text}
           </div>
-          <div className="author-name">~{e.author}</div>
-          <button className='button'>New Quote</button>
+          <div className="logos">
+            <a href={`https://twitter.com/intent/tweet?text=${Quote.text}`} target="_blank"><FontAwesomeIcon className='logo twitter' icon={faTwitter} color="black"/></a>
+          </div>
+          <div className="author-name">~{Quote.author}</div>
+          <button className='button' onClick={getQuotes}>New Quote</button>
         </div>
-            </>
-          )
-        })
-      }
       </div>
     </>
 
@@ -40,3 +37,6 @@ const Box = () => {
 }
 
 export default Box
+
+
+// https://type.fit/api/quotes   

@@ -45,6 +45,14 @@
     opacity: 0.8;
 }
 
+.twitter:hover{
+    color:#1DA1F2;
+}
+
+.insta:hover{
+    color:red;
+}
+
 .button{
     width: 100%;
     background-color: 	#FFC0CB;
@@ -62,6 +70,18 @@
 .button:hover{
     animation-name: bounce ;
     animation-timing-function: ease;
+}
+
+.logos{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo{
+    margin: 5px;
 }
 
 @keyframes bounce {
@@ -85,5 +105,12 @@
         font-size: 8px;
         letter-spacing: 0px;
         font-weight: 300;
+    }
+    .logos{
+        padding-top: 0px;
+    }
+    .logo{
+
+        font-size: 10px;
     }
 }
