@@ -25,7 +25,7 @@ const Box = () => {
             {Quote.text}
           </div>
           <div className="logos">
-            <a href={`https://twitter.com/intent/tweet?text=${Quote.text}......tweet by Quotes Website by Himanshu Chhatwal`} target="_blank"><FontAwesomeIcon className='logo twitter' icon={faTwitter} color="black"/></a>
+            <a href={`https://twitter.com/intent/tweet?text=${Quote.text} by~{Quote.author}`} target="_blank"><FontAwesomeIcon className='logo twitter' icon={faTwitter} color="black"/></a>
 
           </div>
           <div className="author-name">~{Quote.author}</div>
